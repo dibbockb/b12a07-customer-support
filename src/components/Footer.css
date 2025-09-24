@@ -1,0 +1,92 @@
+/* ****************** */
+/* #Footer */
+
+#footer-container {
+  background-color: black;
+  width: 100vw;
+  height: 432px;
+  color: white;
+}
+
+.footer-items {
+  background-color: black;
+  width: 100vw;
+  height: 432px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px 0 100px;
+}
+
+.footer-company-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  text-align: left;
+  gap: 15px;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer-subtitle {
+  font-weight: 400;
+  color: #a1a1aa;
+}
+
+.footer-company-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-services-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-information-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  gap: 20px;
+}
+
+.footer-btn-img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-contact-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-weight: 400;
+  color: #a1a1aa;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-line {
+  color: rgb(58, 58, 58);
+}
+.footer-copyright {
+  background-color: black;
+  max-width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+}
