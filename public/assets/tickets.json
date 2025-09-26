@@ -1,0 +1,92 @@
+[
+  {
+    "id": "#1001",
+    "title": "Email server outage",
+    "description": "The company's main email server is down, affecting all employees. Users are unable to send or receive emails.",
+    "customer": "IT Department",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "25/09/2025"
+  },
+  {
+    "id": "#1002",
+    "title": "Password reset for Jane Doe",
+    "description": "User Jane Doe needs her password reset for her account. She is locked out and requires immediate assistance.",
+    "customer": "Jane Doe",
+    "priority": "Low",
+    "status": "New",
+    "createdAt": "25/09/2025"
+  },
+  {
+    "id": "#1003",
+    "title": "New hire software installation",
+    "description": "Software installation and setup for new employee, John Smith, in the marketing department. Requires access to Adobe Creative Suite and Microsoft Office.",
+    "customer": "HR Department",
+    "priority": "Medium",
+    "status": "Assigned",
+    "createdAt": "25/09/2025"
+  },
+  {
+    "id": "#1004",
+    "title": "VPN connection issues",
+    "description": "Multiple remote employees are reporting problems connecting to the company's VPN. Connection is unstable and frequently drops.",
+    "customer": "Remote Employees",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "25/09/2025"
+  },
+  {
+    "id": "#1005",
+    "title": "Request for new keyboard",
+    "description": "Employee, Sarah Chen, has a malfunctioning keyboard and has requested a replacement.",
+    "customer": "Sarah Chen",
+    "priority": "Low",
+    "status": "New",
+    "createdAt": "25/09/2025"
+  },
+  {
+    "id": "#1006",
+    "title": "Printer not working in Accounting",
+    "description": "The shared network printer on the 3rd floor in the Accounting department is not printing documents. It shows an error message.",
+    "customer": "Accounting Department",
+    "priority": "Medium",
+    "status": "Assigned",
+    "createdAt": "25/09/2025"
+  },
+  {
+    "id": "#1007",
+    "title": "Access to shared drive denied",
+    "description": "User Mike Davis is being denied access to a shared project folder. He needs read/write permissions for a folder named 'Project Alpha'.",
+    "customer": "Mike Davis",
+    "priority": "Medium",
+    "status": "New",
+    "createdAt": "25/09/2025"
+  },
+  {
+    "id": "#1008",
+    "title": "Website login issue for customer",
+    "description": "A customer is unable to log into their account on our website. The 'forgot password' feature is also not working for them.",
+    "customer": "Customer Support",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "25/09/2025"
+  },
+  {
+    "id": "#1009",
+    "title": "Software update for design team",
+    "description": "The design team requires a scheduled update of their graphics software to the latest version. This needs to be done after business hours to avoid interruption.",
+    "customer": "Design Department",
+    "priority": "Low",
+    "status": "Scheduled",
+    "createdAt": "25/09/2025"
+  },
+  {
+    "id": "#1010",
+    "title": "Trouble with video conference call",
+    "description": "User Alex Kim is experiencing poor video and audio quality during all video conference calls. This is affecting his ability to participate in meetings.",
+    "customer": "Alex Kim",
+    "priority": "Medium",
+    "status": "New",
+    "createdAt": "25/09/2025"
+  }
+]
