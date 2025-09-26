@@ -1,7 +1,7 @@
 import React from "react";
 import "./Progress.css";
 
-const Progress = ({ count }) => {
+const Progress = ({ count, resolvedCount }) => {
   return (
     <div id="progress-container">
       <div className="progress-card">
@@ -17,7 +17,7 @@ const Progress = ({ count }) => {
         <img className="img-left" src="assets/lines.png" alt="" />
         <div className="resolved-text">
           <p className="resolved-title">Resolved</p>
-          <p className="resolved-count">0</p>
+          <p className="resolved-count">{resolvedCount}</p>
         </div>
         <img className="img-right" src="assets/lines.png" alt="" />
       </div>

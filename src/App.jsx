@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
   const [progressCount, setProgressCount] = useState(0);
+  const [resolvedCount, setResolvedCount] = useState(0);
 
   return (
     <>
@@ -24,8 +25,12 @@ function App() {
         theme="dark"
       />
       <Navbar />
-      <Progress count={progressCount} />
-      <Tickets setProgressCount={setProgressCount} />
+
+      <Progress count={progressCount} resolvedCount={resolvedCount} />
+      <Tickets
+        setProgressCount={setProgressCount}
+        setResolvedCount={setResolvedCount}
+      />
       <Footer />
     </>
   );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "./Tickets.css";
 
-const Tickets = ({ setProgressCount }) => {
+const Tickets = ({ setProgressCount, setResolvedCount }) => {
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
@@ -14,19 +14,31 @@ const Tickets = ({ setProgressCount }) => {
     fetchTickets();
   }, []);
 
+  //on ticket
   const [ongoingTickets, setOngoingTickets] = useState([]);
-
   const ticketClickHandler = (ticket) => {
     toast("Added to Ongoing Tickets!");
-
     if (!ongoingTickets.find((t) => t.id === ticket.id)) {
       setOngoingTickets([...ongoingTickets, ticket]);
     }
     setProgressCount((prev) => prev + 1);
+    setTickets((prevTickets) =>
+      prevTickets.map((t) =>
+        t.id === ticket.id ? { ...t, status: "In Progress" } : t
+      )
+    );
   };
 
-  const completedHandler = () => {
-    toast("Clicked Complted button");
+  //on complete
+  const [resolvedTickets, setResolvedTickets] = useState([]);
+  const completedHandler = (ticket) => {
+    if (!ticket) return;
+    toast("Marked as Resolved!");
+    setOngoingTickets((prev) => prev.filter((t) => t.id !== ticket.id));
+    setProgressCount((prev) => prev - 1);
+    setResolvedCount((prev) => prev + 1);
+    setResolvedTickets((prev) => [...prev, ticket]);
+    setTickets((prev) => prev.filter((t) => t.id !== ticket.id));
   };
 
   return (
@@ -46,6 +58,12 @@ const Tickets = ({ setProgressCount }) => {
                   style={{
                     backgroundColor:
                       ticket.status === "Open" ? "#B9F8CF" : "#F8F3B9",
+                    color:
+                      ticket.status === "Open"
+                        ? "green"
+                        : ticket.status === "In - Progress"
+                        ? "#9C7700"
+                        : "darkgoldenrod",
                   }}
                 >
                   {ticket.status}
@@ -81,13 +99,13 @@ const Tickets = ({ setProgressCount }) => {
       <div className="ongoing-tickets-abba">
         <p className="tickets-title">Ongoing Tickets</p>
         <div className="ongoing-cards">
-          {ongoingTickets.length === 0 && <p>Click on a ticket to add.</p>}
+          {ongoingTickets.length === 0 && <p>Click on a ticket to add</p>}
           {ongoingTickets.map((ticket) => (
             <div key={ticket.id} className="ongoing-card">
               <p className="ongoing-card-title">{ticket.title}</p>
               <button
                 className="ongoing-card-btn"
-                onClick={() => completedHandler()}
+                onClick={() => completedHandler(ticket)}
               >
                 Complete
               </button>
@@ -96,12 +114,18 @@ const Tickets = ({ setProgressCount }) => {
         </div>
 
         <div className="resolved-abba">
-          <p className="resolved-title2">Resolved Task</p>
-          <p className="resolved-subtitle">No resolved tasks yet.</p>
-          {/* <div className="resolved-cards">
-            {" "}
-            <p className="resolved-card-title">Email server outage</p>{" "}
-          </div> */}
+          <p className="resolved-title2">Resolved Tickets</p>
+          {/* <p className="resolved-subtitle">No resolved tasks yet.</p> */}
+          <div className="resolved-cards">
+            {resolvedTickets.length === 0 && (
+              <p className="resolve-before-title">Complete a ticket to add</p>
+            )}
+            {resolvedTickets.map((ticket) => (
+              <p key={ticket.id} className="resolved-card-title">
+                {ticket.title}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>
