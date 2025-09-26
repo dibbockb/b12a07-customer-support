@@ -1,9 +1,9 @@
-import "./App.css";
-import { ToastContainer } from "react-toastify";
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "./App.css";
 import Navbar from "./components/Navbar";
 import Progress from "./components/Progress";
-import Tickets from "./components/tickets";
+import Tickets from "./components/Tickets";
 import Footer from "./components/Footer";
 
 function App() {

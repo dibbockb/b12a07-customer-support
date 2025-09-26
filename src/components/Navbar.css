@@ -1,3 +1,24 @@
+@media screen and (max-width: 476px) {
+  .nav-item {
+    display: none;
+  }
+
+  .nav-title {
+    font-weight: 800;
+    font-size: 24px;
+    margin-left: -50px;
+  }
+
+  #navbar-container {
+    max-width: 100vw;
+    max-height: 150px;
+  }
+
+  .nav-button-container {
+    margin-right: -80px;
+  }
+}
+
 /* ****************** */
 /* #Navbar */
 

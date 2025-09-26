@@ -1,3 +1,30 @@
+@media screen and (max-width: 476px) {
+  #progress-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    gap: 5px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -20px;
+    /* margin-bottom: 20px; */
+  }
+
+  .progress-card,
+  .resolved-card {
+    border-radius: 24px !important;
+  }
+
+  .progress-count,
+  .resolved-count {
+    font-size: 50px !important;
+  }
+  .progress-title,
+  .resolved-title {
+    font-size: 25px !important;
+  }
+}
+
 #progress-container {
   display: flex;
   justify-content: center;

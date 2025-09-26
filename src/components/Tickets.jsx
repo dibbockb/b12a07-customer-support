@@ -14,31 +14,7 @@ const Tickets = ({ setProgressCount }) => {
     fetchTickets();
   }, []);
 
-  toast();
-
-  //   const initProgressValue = parseInt(
-  //     document.querySelector(".progress-count")?.textContent.trim() || "0",
-  //     10
-  //   );
-  //
-  //   const initResolvedValue = parseInt(
-  //     document.querySelector(".progress-count")?.textContent.trim() || "0",
-  //     10
-  //   );
-
-  // const onGoingCardContainer = document.querySelector(".ongoing-cards");
-
-  // console.log(initProgressValue);
-  // console.log(initResolvedValue);
-  // console.log(onGoingCardContainer);
-
-  //   // console.log("clicked");
-  //   toast("Added to Ongoing Tickets!");
-  //   setOngoingTickets([...ongoingTickets, ticket]);
-  // };
-
   const [ongoingTickets, setOngoingTickets] = useState([]);
-  const [ticketsState, setTicketsState] = useState([]);
 
   const ticketClickHandler = (ticket) => {
     toast("Added to Ongoing Tickets!");
@@ -47,11 +23,10 @@ const Tickets = ({ setProgressCount }) => {
       setOngoingTickets([...ongoingTickets, ticket]);
     }
     setProgressCount((prev) => prev + 1);
-    setTicketsState(
-      ticketsState.map((t) =>
-        t.id === ticket.id ? { ...t, status: "OnGoing" } : t
-      )
-    );
+  };
+
+  const completedHandler = () => {
+    toast("Clicked Complted button");
   };
 
   return (
@@ -112,7 +87,7 @@ const Tickets = ({ setProgressCount }) => {
               <p className="ongoing-card-title">{ticket.title}</p>
               <button
                 className="ongoing-card-btn"
-                onClick={() => toast("Marked as Resolved")}
+                onClick={() => completedHandler()}
               >
                 Complete
               </button>
