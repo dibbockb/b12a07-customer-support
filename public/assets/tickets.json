@@ -88,14 +88,5 @@
     "priority": "Medium",
     "status": "Open",
     "date": "25/09/2025"
-  },
-  {
-    "id": "#1005",
-    "title": "Request for new keyboard",
-    "description": "Employee, Sarah Chen, has a malfunctioning keyboard and has requested a replacement.",
-    "username": "Sarah Chen",
-    "priority": "Medium",
-    "status": "Open",
-    "date": "25/09/2025"
   }
 ]

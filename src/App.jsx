@@ -1,17 +1,32 @@
-// import { use, useState } from "react";
 import "./App.css";
+import { ToastContainer } from "react-toastify";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Progress from "./components/Progress";
-import Tickets from "./components/Tickets";
+import Tickets from "./components/tickets";
+import Footer from "./components/Footer";
 
 function App() {
+  const [progressCount, setProgressCount] = useState(0);
+
   return (
     <>
-      <Navbar></Navbar>
-      <Progress></Progress>
-      <Tickets></Tickets>
-      <Footer></Footer>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme="dark"
+      />
+      <Navbar />
+      <Progress count={progressCount} />
+      <Tickets setProgressCount={setProgressCount} />
+      <Footer />
     </>
   );
 }

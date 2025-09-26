@@ -1,8 +1,8 @@
 #tickets-container {
   display: flex;
-  justify-content: center;
   align-items: start;
-  gap: 140px;
+  justify-content: center;
+  gap: 50px;
 }
 
 .ticket-card {
@@ -16,9 +16,11 @@
   padding: 10px 30px 10px 30px;
   gap: 8px;
   transition: transform 0.1s ease-in-out;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .ticket-card:hover {
   transform: scale(1.03);
+  cursor: default;
 }
 
 .tickets-gallery {
@@ -117,16 +119,70 @@
 }
 
 .date-svg,
-.user-svg {
+.user-svg,
+.ticket-svg {
   width: 16px;
   height: 16px;
   filter: opacity(50%);
 }
 
 p.ticket-date,
-p.ticket-username {
+p.ticket-username,
+p.ticket-id {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
+}
+
+.ongoing-cards {
+  width: 350px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: grey;
+  gap: 25px;
+  margin-top: 15px;
+  padding: 10px 15px 10px 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.ongoing-card-title {
+  font-size: 1.125rem;
+  color: black;
+}
+
+.ongoing-card-btn {
+  width: 20.375rem;
+  height: 2.6875rem;
+  background-color: #02a53b;
+  border-radius: 6px;
+  color: white;
+}
+
+.ongoing-card-btn:hover {
+  background-color: #02521e;
+}
+
+.resolved-cards {
+  width: 22.375rem;
+  height: 3.875rem;
+  background-color: #e0e7ff;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.resolved-card-title {
+  color: rgb(54, 54, 54);
+}
+
+.resolved-abba {
+  margin-top: 25px;
 }
